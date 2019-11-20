@@ -1,5 +1,10 @@
 # CakePHP Redis Cluster Cache Engine
 
+[![Latest Stable Version](https://poser.pugx.org/snakano/cakephp-redis-cluster-cache/v/stable)](https://packagist.org/packages/snakano/cakephp-redis-cluster-cache)
+[![Total Downloads](https://poser.pugx.org/snakano/cakephp-redis-cluster-cache/downloads)](https://packagist.org/packages/snakano/cakephp-redis-cluster-cache)
+[![License](https://poser.pugx.org/snakano/cakephp-redis-cluster-cache/license)](https://packagist.org/packages/snakano/cakephp-redis-cluster-cache)
+
+
 Redis cluster cache engine for CakePHP 2.x
 
 ## Installation
