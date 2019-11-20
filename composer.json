@@ -1,0 +1,29 @@
+{
+    "name": "snakano/cakephp-redis-cluster-cache",
+    "description": "Redis Cache Engine for CakePHP 2.x (support redis cluster)",
+    "version": "0.0.1",
+    "type": "cakephp-plugin",
+    "keywords": [
+        "cakephp",
+        "plugin",
+        "cache",
+        "redis",
+        "redis cluster"
+    ],
+    "homepage": "https://github.com/SNakano/cakephp-redis-cluster-cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "s.nakano",
+            "email": "s.nakano@guppy.co.jp"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "composer/installers": "*",
+        "ext-redis": "*"
+    },
+    "extra": {
+        "installer-name": "RedisClusterCache"
+    }
+}
