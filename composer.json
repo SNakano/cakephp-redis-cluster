@@ -1,7 +1,7 @@
 {
     "name": "snakano/cakephp-redis-cluster-cache",
     "description": "Redis Cache Engine for CakePHP 2.x (support redis cluster)",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "type": "cakephp-plugin",
     "keywords": [
         "cakephp",
