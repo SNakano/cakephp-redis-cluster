@@ -72,4 +72,24 @@ class RedisClusterEngine extends RedisEngine
 
         return $this->_Redis->setOption(RedisCluster::OPT_SLAVE_FAILOVER, $this->settings['slave_failover']);
     }
+
+    /**
+     * Write data for key into cache.
+     *
+     * @param string $key Identifier for the data
+     * @param mixed $value Data to be cached
+     * @param int $duration How long to cache the data, in seconds
+     * @return bool True if the data was successfully cached, false on failure
+     */
+    public function write($key, $value, $duration)
+    {
+        if (!is_int($value)) {
+            $value = serialize($value);
+        }
+        if ($duration === 0) {
+            return $this->_Redis->set($key, $value);
+        }
+
+        return $this->_Redis->setex($key, $duration, $value);
+    }
 }
