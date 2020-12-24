@@ -92,4 +92,22 @@ class RedisClusterEngine extends RedisEngine
 
         return $this->_Redis->setex($key, $duration, $value);
     }
+
+    /**
+     * Delete all keys from the cache
+     *
+     * @param bool $check Whether or not expiration keys should be checked. If
+     *   true, no keys will be removed as cache will rely on redis TTL's.
+     * @return bool True if the cache was successfully cleared, false otherwise
+     */
+    public function clear($check)
+    {
+        if ($check) {
+            return true;
+        }
+        $keys = $this->_Redis->keys($this->settings['prefix'] . '*');
+        $this->_Redis->del($keys);
+
+        return true;
+    }
 }
